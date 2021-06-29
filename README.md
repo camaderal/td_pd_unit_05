@@ -3,9 +3,10 @@ Portfoportfolio lio with Sinformation about the developer as well as qlAlchemyde
  - Python Development Tech Degree Unit 05 Project
 
  Project Details
-  - A portfolio web application developed using Python, Flask and SqlAlchemy.
+  - A portfolio web application developed using Basic Python, Flask and SqlAlchemy.
   - The application showcases information about the developer as well as projects developed during Python Development Tech Degree course.
   - As an additional function, the user can add new projects, edit existing projects or delete them.
+  - Skills Learned: Python Basics, Python File I/O, SQL Flask, SQLAlchemy
 
 How to Run the Application
   - This application needs python 3 to be installed.
