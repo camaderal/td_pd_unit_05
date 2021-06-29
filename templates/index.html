@@ -1,0 +1,88 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <section class="header">
+        <h1>Software Engineer</h1>
+        <p>First, solve the problem. Then write the code</p>
+        <img src="https://media-exp1.licdn.com/dms/image/C5603AQFrYDYubW-6Tw/profile-displayphoto-shrink_800_800/0/1593268902287?e=1629331200&v=beta&t=N0hC3rITt8-F84spy_Ro_-KRF1iOS9VpNs1nV8ef33Y" alt="Headshot of myself">
+    </section>
+    <section id="about">
+        <h2>About Me</h2>
+        <p>
+            I'm Christeena. <br>
+            I like playing video games. <br>
+            I like programming too. <br>
+            I work for Playstation :D 
+        </p>
+        <div id="triangle1"></div>
+        <div id="triangle2"></div>
+    </section>
+    <section id="skills">
+        <i class="fas fa-laptop-code"></i>
+        <h2>Skills</h2>
+        <ul>
+            <li>Java</li>
+            <li>Python</li>
+            <li>C/C++/C#</li>
+            <li>Javascript/Typescript</li>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>PHP</li>
+            <li>jQuery</li>
+            <li>Ajax</li>
+            <li>Flask</li>
+            <li>React</li>
+            <li>Struts</li>
+            <li>Spring</li>
+            <li>Hibernate</li>
+            <li>PL/SQL</li>
+            <li>NoSQL</li>
+            <li>Amazon Web Services</li>
+            <li>Github</li>
+            <li>Eclipse</li>
+            <li>IntelliJ</li>
+            <li>Visual Studio Code</li>
+            <li>DevOps</li>
+            <li>Jenkins</li>
+            <li>Ansible</li>
+            <li>Docker</li>
+            <li>Kubernetes</li>
+        </ul>
+    </section>
+    <section id="projects">
+        <div id="triangle3"></div>
+        <i class="fas fa-file-code"></i>
+        <h2>Projects</h2>
+        <div id="project-list">
+            {% for project in projects %}
+            <div id="project{{ project['id'] }}" class="a-project">
+                <h3><a href="{{ url_for('view_project', id=project['id'] ) }}">{{ project['title'] }}</a></h3>
+                <a href="{{ project['github'] }}" class="github-btn">
+                    <i class="fab fa-github"></i>
+                    View on GitHub
+                </a>
+                <p>
+                    {{ project['desc'] }}
+                </p>
+                <p>
+                    Skills: {{ ",".join(project['skills']) }}
+                </p>
+            </div>
+            {% endfor %}
+        </div>
+        <div id="triangle4"></div>
+    </section>
+    <section id="contact">
+        <i class="fas fa-paper-plane"></i>
+        <h2>Contact Me</h2>
+        <p>
+            Have any questions about me? <br>
+            I'm always available for a chat. <br>
+            Please contact me through my mail.
+        </p>
+        <p>
+            <i class="fas fa-envelope"></i>
+            camaderal@gmail.com
+        </p>
+    </section>
+{% endblock %}

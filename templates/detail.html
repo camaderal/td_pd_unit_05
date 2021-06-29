@@ -1,0 +1,35 @@
+{% extends "layout.html" %}
+
+{% block content %}
+    <section class="header">
+        <h1>{{ target_project['title'] }}</h1>
+        <p>{{ target_project['date'] }}</p>
+        <a href="{{ target_project['github'] }}" class="github-btn">
+            <i class="fab fa-github"></i>
+            View on GitHub
+        </a>
+        <ul class="project-skills">
+            <div>
+                {% for skill in target_project['skills'] %}
+                    <li>{{ skill }}</li>
+                {% endfor %}
+            </div>
+        </ul>
+    </section>
+    <section id="project-desc">
+        <div id="triangle5"></div>
+        <h2>Description</h2>
+        <p>{{ target_project['desc'] }}</p>
+        <div id="triangle6"></div>
+    </section>
+    <section id="edit-delete">
+        <a href="{{ url_for('edit_project', id=target_project['id']) }}">
+            <i class="fas fa-edit"></i>
+            Edit
+        </a>
+        <a href="{{ url_for('delete_project', id=target_project['id']) }}">
+            <i class="far fa-trash-alt"></i>
+            Delete
+        </a>
+    </section>
+{% endblock %}
