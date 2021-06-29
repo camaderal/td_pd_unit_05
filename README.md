@@ -1,13 +1,11 @@
 # td_pd_unit_05
-Portfolio with SqlAlchemy
- - Python Development Tech Degree Unit 04 Project
+Portfoportfolio lio with Sinformation about the developer as well as qlAlchemydeveloped during .
+ - Python Development Tech Degree Unit 05 Project
 
  Project Details
-  - A console-based application that allows a user to interact with a store's inventory.
-  - The application has 3 main functions:
-    - View the details of a product in the inventory
-    - Add or update a product in the inventtory
-    - Backup the current inventory to a csv file.
+  - A portfolio web application developed using Python, Flask and SqlAlchemy.
+  - The application showcases information about the developer as well as projects developed during Python Development Tech Degree course.
+  - As an additional function, the user can add new projects, edit existing projects or delete them.
 
 How to Run the Application
   - This application needs python 3 to be installed.
